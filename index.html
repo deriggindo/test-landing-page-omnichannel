@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Venus Template</title>
+    <title>Testando Plano Pro Omnichannel - Freshworks</title>
     <link href="https://fonts.googleapis.com/css?family=Heebo:400,700|Oxygen:700" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/style.css">
     <script src="https://unpkg.com/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
@@ -198,5 +198,21 @@
 		window.addEventListener?window.addEventListener("load",initiateCall,!1):
 		window.attachEvent("load",initiateCall,!1);
 	  </script>
+	
+	<!--Scritp do chat online: Web widget (Padrão)-->
+	<script>
+	  function initFreshChat() {
+	    window.fcWidget.init({
+	      	 token: "6ebb66e3-39ac-4bfc-8a1a-b6ac7a676fd5",
+		 host: "https://leadtracker.freshchat.com"
+	    });
+	  }
+	  function initialize(i,t){var e;i.getElementById(t)?
+	  initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,
+	  e.src="https://leadtracker.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}
+	  function initiateCall(){initialize(document,"Freshchat-js-sdk")}
+	  window.addEventListener?window.addEventListener("load",initiateCall,!1):
+	  window.attachEvent("load",initiateCall,!1);
+	</script>
 </body>
 </html>
