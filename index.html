@@ -37,7 +37,7 @@
 	                        <h1 class="hero-title mt-0">Landing template for startups</h1>
 	                        <p class="hero-paragraph">Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.</p>
 	                        <div class="hero-cta">
-								<a class="button button-primary button-wide-mobile" href="#">Get early access</a>
+								<button class="button button-primary button-wide-mobile" onclick="openWidget()" type="button">Solicitar Cancelamento</button>
 							</div>
 						</div>
 						<div class="mockup-container">
@@ -184,51 +184,19 @@
 
     <script src="dist/js/main.min.js"></script>
 
-	<script>
-		function initFreshChat() {
-		  window.fcWidget.init({
-				 token: "6ebb66e3-39ac-4bfc-8a1a-b6ac7a676fd5",
-		   host: "https://leadtracker.freshchat.com"
-		  });
-		// Copy the below lines under window.fcWidget.init inside initFreshChat function in the above snippet
-
-		// To set unique user id in your system when it is available
-		window.fcWidget.setExternalId("john.doe1987");
-		
-		// To set user name
-		window.fcWidget.user.setFirstName("John");
-		
-		// To set user email
-		window.fcWidget.user.setEmail("john.doe@gmail.com");
-		
-		// To set user properties
-		window.fcWidget.user.setProperties({
-		  plan: "Pro",                 // meta property 1
-		  status: "Active"                // meta property 2
-		});
-		}
-		function initialize(i,t){var e;i.getElementById(t)?
-		initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,
-		e.src="https://leadtracker.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}
-		function initiateCall(){initialize(document,"Freshchat-js-sdk")}
-		window.addEventListener?window.addEventListener("load",initiateCall,!1):
-		window.attachEvent("load",initiateCall,!1);
-	  </script>
+	<!--This is the function to open the widget code-->
+	function openWidget() {
+	FreshworksWidget('open');
+	}
 	
-	<!--Scritp do chat online: Web widget (Padrão)-->
+	<!--Script do Widget para Cancelamentos-->
 	<script>
-	  function initFreshChat() {
-	    window.fcWidget.init({
-	      	 token: "6ebb66e3-39ac-4bfc-8a1a-b6ac7a676fd5",
-		 host: "https://leadtracker.freshchat.com"
-	    });
-	  }
-	  function initialize(i,t){var e;i.getElementById(t)?
-	  initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,
-	  e.src="https://leadtracker.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}
-	  function initiateCall(){initialize(document,"Freshchat-js-sdk")}
-	  window.addEventListener?window.addEventListener("load",initiateCall,!1):
-	  window.attachEvent("load",initiateCall,!1);
+		window.fwSettings={
+		'widget_id':154000000147
+		};
+		!function(){if("function"!=typeof window.FreshworksWidget){var n=function(){n.q.push(arguments)};n.q=[],window.FreshworksWidget=n}}() 
 	</script>
+	<script type='text/javascript' src='https://widget.freshworks.com/widgets/154000000147.js' async defer></script>
+
 </body>
 </html>
